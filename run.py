@@ -64,4 +64,27 @@ def update_excess_worksheet(info):
     surplus_worksheet.append_row(info)
     print("Excess Worksheet Updated successfully!\n")
 
+def calc_excess_info(sales_row):
+    """
+    This compares the sales with the inventory and then calculates the excess or short amount for each bouquet type.
+    The excess is evaluated as the number of sales subtracted from the inventory.
+    * A Negative excess points to the requirement of additional inventory made that week.
+    * A Positive excess results in the number of bouquets that were thrown away.
+    """
+    print("Determining Excess data...\n")
+    inventory = SHEET.worksheet("inventory").get_all_info()
+    inventory_row = inventory[-1]
+    excess_info = []
+    for i in range(len(inventory_row)):
+    # Note: try/except is not necessary because inventory is already a validated 
+    # integer from above.
+        inventory_value = int(inventory_row[i])  
+        sales_value = sales_row[i]
+        excess = inventory_value - sales_value
+        excess_info.append(excess)
+    
+    return excess_info
+
+
+
 
