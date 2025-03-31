@@ -55,3 +55,13 @@ def update_sales_worksheet(info):
     sales_worksheet.append_row(info)
     print("Sales Worksheet has Updated Successfully!\n")
 
+def update_excess_worksheet(info):
+    """
+    Update excess worksheet by adding new row according to the list information given.
+    """
+    print("Updating Excess Worksheet...\n")
+    excess_worksheet = SHEET.worksheet("excess")
+    surplus_worksheet.append_row(info)
+    print("Excess Worksheet Updated successfully!\n")
+
+
