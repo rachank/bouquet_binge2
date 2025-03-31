@@ -16,8 +16,8 @@ SHEET = GSPREAD_CLIENT.open('bouquet_binge2')
 
 def obtain_sales_info():
     """
-    This function asks the user to enter 7 numbers, sparated by commas 
-    of bouquet sales for the previous week. 
+    This function asks the user to enter 7 numbers, sparated by commas, 
+    of the bouquet sales for the previous week. 
     It continues to ask until the numbers are valid, if there is an error in the values 
     it will return an error message, if no errors exist it returns a list
     of 7 integers.
@@ -39,7 +39,7 @@ def obtain_sales_info():
                 int(value)
             except ValueError:
                 all_values = False
-                print(f"Error: '{value}' is not a valid integer.")
+                print(f"Error: '{value}' is not a valid integer. Please reenter valid numbers.")
         sales_info = [int(value) for value in sales_info]
 
     print("Sales data:", sales_info)
@@ -115,4 +115,19 @@ def calc_inventory_info(info):
 
     return new_inventory_info
 
+def obtain_inventory_info(info):
+    """
+    This retrieves the names of the headings for the different types of bouquets 
+    and prints out the calculated inventory number for the corresponding bouquet.
+    """
+    bouquet_options = SHEET.worksheet("inventory").get_bouquet_names()[0]
+    print("Please prepare the following number of flower bouquets for next week's inventory:\n")
+    inventory_options = {}
+    for bouquet_option, inventory in zip(bouquet_options, info):
+        inventory_options[bouquet_option] = inventory
+
+    return inventory_options
+
+
+    
 
