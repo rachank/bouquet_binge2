@@ -99,4 +99,20 @@ def get_latest_sales_info():
         
     return last_5_entries
 
+def calc_inventory_info(info):
+    """
+    This calculates the average inventory for each item type, 
+    adding 15% for additional available inventory
+    """
+    print("calculating Inventory Information...\n")
+    new_inventory_info = []
+
+    for column in info:
+        int_column = [int(num) for num in column]
+        average = sum(int_column) / len(in_column)
+        inventory_num = average * 1.15
+        new_inventory_info.append(round(invetory_num))
+
+    return new_inventory_info
+
 
