@@ -117,4 +117,4 @@ The link for this website on GitHub is here: https://github.com/rachank/bouquet_
  - Code Institute for the deployment terminal for Heroku.
  - [w3schools:](https://www.w3schools.com/python/default.asp) was used for various references.
  - [Emoji Unicode Tables:](https://apps.timwhitlock.info/emoji/tables/unicode) was used to add the flower emoji unicodes.
-
+ - This project was very much insired by the Love Sandwiches project and contains some similarities in the code. 
