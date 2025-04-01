@@ -9,7 +9,7 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 
 ## Features
 
--   Once the program is run the user is prompted to input 7 numbers representing sales values for the 7 different types of bouquets that are sold: Roses, Orchids, Lilies, Carnations, Hydrangeas, Mums, and Seasonal.
+- Once the program is run the user is prompted to input 7 numbers representing sales values for the 7 different types of bouquets that are sold: Roses, Orchids, Lilies, Carnations, Hydrangeas, Mums, and Seasonal.
 
 ![start of program](images/start_of_program.png)
 
@@ -38,10 +38,8 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 ![image of google sheet excess updated](images/googlesheet_excess_updated.png)
 
 
-- The “inventory” worksheet will also be updated in Google Sheets.
+- The “inventory” worksheet will also be updated in Google Sheets. *See Remaining Bugs
 
-PUT IN IMAGE OF GOOGLE SHEETS INVENTORY
-![IMAGE DESCRIPTION](RELATIVE PATH)
 
 
 - The program then calculates the average weekly sales over 5 weeks and recommends the required inventory, adding on an additional 15% inventory surplus to allow for additional quick, last minute sales.
@@ -83,7 +81,7 @@ PUT IN IMAGE OF GOOGLE SHEETS INVENTORY
 
 ## Remaining Bugs
 
-- No bugs remaining that I am aware of.
+- The inventory worksheet is not updating properly, but I ran out of time to fix this last minute bug, as it had been updating previously when checked, but I had changed some code and it seems to no longer update. 
 
 
 ## Deployment
@@ -118,21 +116,3 @@ The link for this website on GitHub is here: https://github.com/rachank/bouquet_
  - Thank you to my mentor Brian Mancharia for code review, tips, help and feedback. All so very much appreciated! 
  - Code Institute for the deployment terminal for Heroku.
 
-
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
