@@ -25,7 +25,7 @@ def obtain_sales_info():
     while True:
         print("Please enter bouquet sales data from the last week of sales.")
         print("Data order: Roses, Orchids, Lilies, Carnations, Hydrangeas,\
-         Mums, and Seasonal.")
+        Mums, and Seasonal.")
         print("Example: 20,30,20,10,20,30,25\n")
         user_str = input("Enter The Weekly Data Here:\n")
         sales_info = user_str.split(",")
@@ -137,6 +137,8 @@ def obtain_inventory_info(info):
         inventory_options[bouquet_option] = inventory
     return inventory_options
 
+print("\U0001F33C Welcome to the Bouquet Binge Flower Shop\
+ Inventory Information. \U0001F33C")
 
 def main():
     """
@@ -153,8 +155,4 @@ def main():
 
 
 main()
-
-
-print("\U0001F33C Welcome to the Bouquet Binge Flower Shop\
-Inventory Information. \U0001F33C")
 
