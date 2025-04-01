@@ -115,4 +115,6 @@ The link for this website on GitHub is here: https://github.com/rachank/bouquet_
 
  - Thank you to my mentor Brian Mancharia for code review, tips, help and feedback. All so very much appreciated! 
  - Code Institute for the deployment terminal for Heroku.
+ - [w3schools:](https://www.w3schools.com/python/default.asp) was used for various references.
+ - [Emoji Unicode Tables:](https://apps.timwhitlock.info/emoji/tables/unicode) was used to add the flower emoji unicodes.
 
