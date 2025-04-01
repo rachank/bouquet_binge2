@@ -118,16 +118,28 @@ def calc_inventory_info(info):
 def obtain_inventory_info(info):
     """
     This retrieves the names of the headings for the different types of bouquets 
-    and prints out the calculated inventory number for the corresponding bouquet.
+    and returns the calculated inventory number for the corresponding bouquet.
     """
-    bouquet_options = SHEET.worksheet("inventory").get_bouquet_names()[0]
-    print("Please prepare the following number of flower bouquets for next week's inventory:\n")
+    bouquet_options = SHEET.worksheet("inventory").get_all_values()[0]
+    print("\U0001F33C Please prepare the following number of flower bouquets for next week's inventory:\n")
     inventory_options = {}
     for bouquet_option, inventory in zip(bouquet_options, info):
         inventory_options[bouquet_option] = inventory
 
     return inventory_options
 
+def main():
+    """
+    This calls all other functions in the program.
+    """
+    sales_info = obtain_sales_info()
+    update_sales_worksheet(sales_info)
+    excess_info = calc_excess_info(sales_info)
+    update_excess_worksheet(excess_info)
+    latest_sales_info = get_latest_sales_info()
+    inventory_info = calc_inventory_info(latest_sales_info)
+    inventory_need_next_week = obtain_inventory_info(inventory_info)
 
-    
-
+    print("\U0001F33C Welcome to the Bouquet Binge Flower Shop Inventory Information \U0001F33C")
+    inventory_need_next_week = obtain_inventory_info(inventory_info)
+    print(inventory_need_next_week)
