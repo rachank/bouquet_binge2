@@ -69,6 +69,7 @@ def update_excess_worksheet(info):
     excess_worksheet.append_row(info)
     print("Excess Worksheet Updated successfully!\n")
 
+
 def update_inventory_worksheet(info):
     """
     Update new calculated inventory with the new inventory values.
@@ -141,7 +142,6 @@ def obtain_inventory_info(info):
     inventory number for the corresponding bouquet.
     """
     bouquet_options = SHEET.worksheet("inventory").get_all_values()[0]
-    print("\U0001F33C Please prep these bouquets for next week's inventory:\n")
     inventory_options = {}
     for bouquet_option, inventory in zip(bouquet_options, info):
         inventory_options[bouquet_option] = inventory
@@ -164,7 +164,9 @@ def main():
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
     update_inventory_worksheet(inventory_info)
+    print("\U0001F33C Please prep these bouquets for next week's inventory:\n")
     print(inventory_need_next_week)
+
 
 main()
 
