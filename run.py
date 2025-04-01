@@ -124,7 +124,7 @@ def calc_inventory_info(info):
     This calculates the average inventory for each item type,
     adding 15% for additional available inventory.
     """
-    print("calculating Inventory Information...\n")
+    print("Calculating Inventory Information...\n")
     new_inventory_info = []
     for column in info:
         int_column = [int(num) for num in column]
