@@ -39,7 +39,7 @@ def obtain_sales_info():
                 int(value)
             except ValueError:
                 all_values = False
-                print(f"Error: '{value}' is not a valid integer. Please reenter valid numbers.")
+                print(f"Error: '{value}' is not a valid integer. Please re-enter valid numbers.")
         sales_info = [int(value) for value in sales_info]
         print("Sales data:", sales_info)
         return sales_info        
@@ -55,11 +55,12 @@ def update_sales_worksheet(info):
 
 def update_excess_worksheet(info):
     """
-    Update excess worksheet by adding new row according to the list information given.
+    Update excess worksheet by adding new row according to the list 
+    information given.
     """
     print("Updating Excess Worksheet...\n")
     excess_worksheet = SHEET.worksheet("excess")
-    surplus_worksheet.append_row(info)
+    excess_worksheet.append_row(info)
     print("Excess Worksheet Updated successfully!\n")
 
 def calc_excess_info(sales_row):
@@ -70,7 +71,7 @@ def calc_excess_info(sales_row):
     * A Positive excess results in the number of bouquets that were thrown away.
     """
     print("Determining Excess data...\n")
-    inventory = SHEET.worksheet("inventory").get_all_info()
+    inventory = SHEET.worksheet("inventory").get_all_values()
     inventory_row = inventory[-1]
     excess_info = []
     for i in range(len(inventory_row)):
@@ -104,9 +105,9 @@ def calc_inventory_info(info):
     new_inventory_info = []
     for column in info:
         int_column = [int(num) for num in column]
-        average = sum(int_column) / len(in_column)
+        average = sum(int_column) / len(int_column)
         inventory_num = average * 1.15
-        new_inventory_info.append(round(invetory_num))
+        new_inventory_info.append(round(inventory_num))
     return new_inventory_info
 
 def obtain_inventory_info(info):
@@ -132,9 +133,8 @@ def main():
     latest_sales_info = get_latest_sales_info()
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
-    inventory_need_next_week = obtain_inventory_info(inventory_info)
     print(inventory_need_next_week)
 
-    main()
+main()
 
-    print("\U0001F33C Welcome to the Bouquet Binge Flower Shop Inventory Information \U0001F33C")
+print("\U0001F33C Welcome to the Bouquet Binge Flower Shop Inventory Information. \U0001F33C")
