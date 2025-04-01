@@ -20,23 +20,22 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 
 - This program uses the gspread API to interact with Google Sheets where the data is stored in all of the respective worksheets “inventory”, “excess” and “sales” for the data given, calculated and updated for all of the different types of flower bouquets sold.
 
-![Google worksheets for inventory](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=59501002#gid=59501002)
+[Google worksheets for inventory](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=59501002#gid=59501002)
 
-![Google worksheets for sales](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=0#gid=0)
+[Google worksheets for sales](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=0#gid=0)
 
-![Google worksheets for excess](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=884698397#gid=884698397)
+[Google worksheets for excess](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=884698397#gid=884698397)
 
 
 - Once the input is valid, the program will update the sales information given in the Google Sheets “sales” worksheet.
 
-PUT IN IMAGE OF GOOGLE SHEETS “SALES”
+![image of google sheet sales updated](images/googlesheet_sales_updated.png)
 
 - It will also calculate the excess or shortage of each type of bouquet based on the sales numbers given and the current listed inventory in the “inventory” worksheet.
 
 - The “excess” worksheet will then also be updated with either an excess, results of a positive number, or a shortage, results of a negative number, for each type of bouquet.
 
-![IMAGE DESCRIPTION](RELATIVE PATH)
-PUT IN IMAGE OF GOOGLE SHEETS EXCESS
+![image of google sheet excess updated](images/googlesheet_excess_updated.png)
 
 
 - The “inventory” worksheet will also be updated in Google Sheets.
