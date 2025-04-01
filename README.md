@@ -55,22 +55,57 @@ PUT IN IMAGE OF GOOGLE SHEETS INVENTORY
 - Add a feature to generate weekly or monthly sales reports to track sales trends over time to show which bouquet types are in high demand and during which periods of time.
 
 
+## Technologies Used
+
+- Python 
+- [PEP8:](https://pep8ci.herokuapp.com/#) To check code for PEP8 requirements.
+- [Pages:](https://apps.apple.com/us/app/pages/id361309726) for grammer and spell check
+- [GitHub:](https://github.com/) Used to store the project code.
+- [VSCode](https://code.visualstudio.com/) Used for version control.
+- [Heroku:](https://www.heroku.com/?utm_source=google&utm_medium=paid_search&utm_campaign=amer_heraw&utm_content=general-branded-search-rsa&utm_term=heroku&utm_source_platform=GoogleAds&gad_source=1&gclid=Cj0KCQjwna6_BhCbARIsALId2Z2wHGJGgLVyKPEGQTXuZQLrVZQNEd3Cax-bKm8JRkfbp4zbmawAdZUaAp3-EALw_wcB) Used to deploy the application.
+
+
+
 ## Testing
 
-- Some issues found when run through PEP8 linter, mostly missing or too many spaces and a few lines that contained too many characters. All was corrected.
+- Some issues found when run through PEP8 CI Python linter, mostly missing or too many spaces and a few lines that contained too many characters. All was corrected.
 
 
 ![PEP8 CI Python Linter](images/pep8_ci_python_linter.png)
 
 
+## Deployment
+
+This webisite is deployed to Heroku. 
+
+The steps to deploy are as follows:
+
+1. Log in to Heroku.
+2. Click on "Create New App".
+3. Choose a unique app name and add your region.
+4. Click on "Create app".
+5. Navigate to the "settings" tab.
+6. Click on "Reveal Config Vars".
+7. Add Config Var in Heroku's settings. The key is PORT and the value is 8000.
+8. Add Config Var called "CREDS" and paste the JSON into the value field.
+9. Scroll down the page to "Buildpacks".
+10. Click on "Add Buildpacks".
+11. First add "python", then click save.
+12. Secondly, add "nodejs" and click save.
+13. In the deploy tab, select either the automatic deployment option or the manual deployment option for your app.
+
+If automatic deployment is chosen, the program will automatically update with each new push to the respository.
+
+This respository can be cloned by entering the command "git clone https://github.com/rachank/bouquet_binge2.git into the terminal of your IDE.
+
+The link for this website on GitHub is here: https://github.com/rachank/bouquet_binge2.git
 
 
+## Credits
 
+ - Thank you to my mentor Brian Mancharia for code review, tips, help and feedback. All so very much appreciated! 
 
-
-
-
-
+ 
 
 ## Creating the Heroku app
 
