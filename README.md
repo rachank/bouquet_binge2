@@ -77,7 +77,16 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 
 ## Functionality Testing
 
-
+| Test Label                                            | Test Action                                                                                | Expected Result                                                                                                                                                            | Test Outcome |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| First information runs upon startup                   | Visually inspect whether informational section and input request is in order               | Welcome message and instructions, along with input request are listed accurately                                                                                           | PASS         |
+| Validate input for 7 values                           | Enter fewer or more than 7 values                                                          | The program issues an error message telling the user they must enter 7 numbers and informs them of how many were entered previously.                                       | PASS         |
+| Validate input for interger values                    | Enter a non interger value                                                                 | The program issues an error message telling the user they must enter 7 numbers and informs them of how many were entered previously.                                       | PASS         |
+| Program requests input until valid input is entered   | Enter many invalid inputs                                                                  | Program continues to provide correct error messages, along with new input prompts and requirements for correct input types.                                                | PASS         |
+| Input sales values are updated on sales spreadsheet   | Enter sales values and check that sales spreadsheet is updated                             | Program should update sales values entered to the sales apreadsheet.                                                                                                       | PASS         |
+| Updates to excess spreadsheet after calculations made | Enter sales values and check that the excess spreadsheet has the correct values updated    | Program should update the excess values in the excess spreadsheet by subtracting the sales values from the inventory values.                                               | PASS         |
+| Updates to inventory spreadsheet correct              | Enter sales values and check that the inventory spreadsheet has the correct values updated | Program should update the inventory spreadsheet with the newly calculated inventory numbers taken from the average value of the last 5 weeks with an additional 15% added. | PASS         |
+| Final results show and are calculated correctly       | Enter sales values and check that the final results are correct                            | Program should print a message stating next week's inventory requirements listed with corresponding bouquet type.                                                          | PASS         |
 
 
 
