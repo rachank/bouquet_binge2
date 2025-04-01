@@ -69,6 +69,15 @@ def update_excess_worksheet(info):
     excess_worksheet.append_row(info)
     print("Excess Worksheet Updated successfully!\n")
 
+def update_inventory_worksheet(info):
+    """
+    Update new calculated inventory with the new inventory values.
+    """
+    print("Updating Inventory Worksheet...\n")
+    inventory_worksheet = SHEET.worksheet("inventory")
+    inventory_worksheet.append_row(info)
+    print("Inventory Worksheet Updated successfully!\n")
+
 
 def calc_excess_info(sales_row):
     """
@@ -154,8 +163,8 @@ def main():
     latest_sales_info = get_latest_sales_info()
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
+    update_inventory_worksheet(inventory_info)
     print(inventory_need_next_week)
-
 
 main()
 
