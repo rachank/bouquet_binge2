@@ -29,7 +29,7 @@ def obtain_sales_info():
         print("Example: 20,30,20,10,20,30,25\n")
         user_str = input("Enter The Weekly Data Here:\n")
         sales_info = user_str.split(",")
-         if len(sales_info) != 7:
+        if len(sales_info) != 7:
             print("Error. Please enter exactly 7 numbers seperated by commas.")
             print(f"You entered {len(sales_info)} values.")
             continue
@@ -41,10 +41,8 @@ def obtain_sales_info():
                 all_values = False
                 print(f"Error: '{value}' is not a valid integer. Please reenter valid numbers.")
         sales_info = [int(value) for value in sales_info]
-
-    print("Sales data:", sales_info)
-
-    return sales_info        
+        print("Sales data:", sales_info)
+        return sales_info        
 
 def update_sales_worksheet(info):
     """
@@ -82,7 +80,6 @@ def calc_excess_info(sales_row):
         sales_value = sales_row[i]
         excess = inventory_value - sales_value
         excess_info.append(excess)
-    
     return excess_info
 
 def get_latest_sales_info():
@@ -93,26 +90,23 @@ def get_latest_sales_info():
     sales_sheet = SHEET.worksheet("sales")
     last_5_entries = []
     for col_index in range(1,8):
-    column_info = sales_sheet.col_values(col_index)
-    last_5 = column_info[2:]
-    last_5_entries.append(last_5)
-        
+        column_info = sales_sheet.col_values(col_index)
+        last_5 = column_info[2:]
+        last_5_entries.append(last_5)
     return last_5_entries
 
 def calc_inventory_info(info):
     """
     This calculates the average inventory for each item type, 
-    adding 15% for additional available inventory
+    adding 15% for additional available inventory.
     """
     print("calculating Inventory Information...\n")
     new_inventory_info = []
-
     for column in info:
         int_column = [int(num) for num in column]
         average = sum(int_column) / len(in_column)
         inventory_num = average * 1.15
         new_inventory_info.append(round(invetory_num))
-
     return new_inventory_info
 
 def obtain_inventory_info(info):
@@ -125,7 +119,6 @@ def obtain_inventory_info(info):
     inventory_options = {}
     for bouquet_option, inventory in zip(bouquet_options, info):
         inventory_options[bouquet_option] = inventory
-
     return inventory_options
 
 def main():
@@ -139,12 +132,9 @@ def main():
     latest_sales_info = get_latest_sales_info()
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
+    inventory_need_next_week = obtain_inventory_info(inventory_info)
+    print(inventory_need_next_week)
 
     main()
 
     print("\U0001F33C Welcome to the Bouquet Binge Flower Shop Inventory Information \U0001F33C")
-    
-    inventory_need_next_week = obtain_inventory_info(inventory_info)
-    print(inventory_need_next_week)
-
-    
