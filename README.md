@@ -20,13 +20,15 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 
 - This program uses the gspread API to interact with Google Sheets where the data is stored in all of the respective worksheets “inventory”, “excess” and “sales” for the data given, calculated and updated for all of the different types of flower bouquets sold.
 
-![IMAGE DESCRIPTION](RELATIVE PATH)
-PUT IN IMAGES OF ALL 3 ORIGINAL GOOGLE WORKSHEETS FROM THE START
+![Google worksheets for inventory](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=59501002#gid=59501002)
+
+![Google worksheets for sales](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=0#gid=0)
+
+![Google worksheets for excess](https://docs.google.com/spreadsheets/d/1Rcb7uvgCEq8Ns7ZwGlAph3yQg5Dwz02bqxLMq091CFE/edit?gid=884698397#gid=884698397)
 
 
 - Once the input is valid, the program will update the sales information given in the Google Sheets “sales” worksheet.
 
-![IMAGE DESCRIPTION](RELATIVE PATH)
 PUT IN IMAGE OF GOOGLE SHEETS “SALES”
 
 - It will also calculate the excess or shortage of each type of bouquet based on the sales numbers given and the current listed inventory in the “inventory” worksheet.
@@ -45,6 +47,7 @@ PUT IN IMAGE OF GOOGLE SHEETS INVENTORY
 
 - The program then calculates the average weekly sales over 5 weeks and recommends the required inventory, adding on an additional 15% inventory surplus to allow for additional quick, last minute sales.
 
+![image of program fully run](images/run_program_correct_numbers.png)
 
 ## Possible Future Features
 
