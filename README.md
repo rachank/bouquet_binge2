@@ -74,6 +74,16 @@ PUT IN IMAGE OF GOOGLE SHEETS INVENTORY
 ![PEP8 CI Python Linter](images/pep8_ci_python_linter.png)
 
 
+## Solved Bugs
+
+- Had a problem with the try/except validation line of the code within the obtain_sales_info function and had an error message. It was corrected by adding in a break after the except message to print out the correct error message and validate the users input correctly.
+
+
+## Remaining Bugs
+
+- No bugs remaining that I am aware of.
+
+
 ## Deployment
 
 This webisite is deployed to Heroku. 
@@ -81,22 +91,22 @@ This webisite is deployed to Heroku.
 The steps to deploy are as follows:
 
 1. Log in to Heroku.
-2. Click on "Create New App".
+2. Click on "Create New App" on the top right on the "new" button.
 3. Choose a unique app name and add your region.
 4. Click on "Create app".
 5. Navigate to the "settings" tab.
 6. Click on "Reveal Config Vars".
-7. Add Config Var in Heroku's settings. The key is PORT and the value is 8000.
-8. Add Config Var called "CREDS" and paste the JSON into the value field.
+7. Add Config Var called "CREDS" and paste the CREDS.JSON file into the value field.
+8. Add Config Var - key is PORT and the value is 8000.
 9. Scroll down the page to "Buildpacks".
 10. Click on "Add Buildpacks".
 11. First add "python", then click save.
-12. Secondly, add "nodejs" and click save.
-13. In the deploy tab, select either the automatic deployment option or the manual deployment option for your app.
+12. Secondly, add "nodejs" and click save. These buildpacks must be in this order and can be clicked on and dragged in place, if not in order.
+13. In the Deploy tab at the top, select GitHub and fill in by searching for the GitHub repository name and then choose either the automatic deployment option or the manual deployment option for your app.
 
 If automatic deployment is chosen, the program will automatically update with each new push to the respository.
 
-This respository can be cloned by entering the command "git clone https://github.com/rachank/bouquet_binge2.git into the terminal of your IDE.
+This respository can be cloned by entering the command "git clone https://github.com/rachank/bouquet_binge2.git" into the terminal of your IDE.
 
 The link for this website on GitHub is here: https://github.com/rachank/bouquet_binge2.git
 
@@ -104,8 +114,9 @@ The link for this website on GitHub is here: https://github.com/rachank/bouquet_
 ## Credits
 
  - Thank you to my mentor Brian Mancharia for code review, tips, help and feedback. All so very much appreciated! 
+ - Code Institute for the deployment terminal for Heroku.
 
- 
+
 
 ## Creating the Heroku app
 
