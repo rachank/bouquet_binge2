@@ -24,8 +24,8 @@ def obtain_sales_info():
     """
     while True:
         print("Please enter bouquet sales data from the last week of sales.")
-        print("Data order: Roses, Orchids, Lilies, Carnations, Hydrangeas,\
-        Mums, and Seasonal.")
+        print("Data order:")
+        print("Roses, Orchids, Lilies, Carnations, Hydrangeas, Mums, & Seasonal.")
         print("Example: 20,30,20,10,20,30,25\n")
         user_str = input("Enter The Weekly Data Here:\n")
         sales_info = user_str.split(",")
@@ -41,9 +41,11 @@ def obtain_sales_info():
                 all_values = False
                 print(f"Error: '{value}' is not a valid integer.\
                 Please re-enter valid numbers.")
-        sales_info = [int(value) for value in sales_info]
-        print("Sales data:", sales_info)
-        return sales_info
+                break
+        if all_values:
+            sales_info = [int(value) for value in sales_info]
+            print("Sales data:", sales_info)
+            return sales_info
 
 
 def update_sales_worksheet(info):
@@ -130,8 +132,7 @@ def obtain_inventory_info(info):
     inventory number for the corresponding bouquet.
     """
     bouquet_options = SHEET.worksheet("inventory").get_all_values()[0]
-    print("\U0001F33C Please prepare the following number of flower\
-    bouquets for next week's inventory:\n")
+    print("\U0001F33C Please prep these bouquets for next week's inventory:\n")
     inventory_options = {}
     for bouquet_option, inventory in zip(bouquet_options, info):
         inventory_options[bouquet_option] = inventory
