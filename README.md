@@ -61,6 +61,7 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 - Python 
 - [PEP8:](https://pep8ci.herokuapp.com/#) To check code for PEP8 requirements.
 - [Pages:](https://apps.apple.com/us/app/pages/id361309726) for grammer and spell check
+- [Table to Markdown:](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) used to transfer the Functionality table to markdown for the readme file.
 - [GitHub:](https://github.com/) Used to store the project code.
 - [VSCode](https://code.visualstudio.com/) Used for version control.
 - [Heroku:](https://www.heroku.com/?utm_source=google&utm_medium=paid_search&utm_campaign=amer_heraw&utm_content=general-branded-search-rsa&utm_term=heroku&utm_source_platform=GoogleAds&gad_source=1&gclid=Cj0KCQjwna6_BhCbARIsALId2Z2wHGJGgLVyKPEGQTXuZQLrVZQNEd3Cax-bKm8JRkfbp4zbmawAdZUaAp3-EALw_wcB) Used to deploy the application.
@@ -74,7 +75,8 @@ This program utilizes google sheets to store the inventory, sales and excess dat
 
 ![PEP8 CI Python Linter](images/pep8_ci_python_linter.png)
 
-## Manual Testing
+## Functionality Testing
+
 
 
 
@@ -122,9 +124,10 @@ The link for this website on GitHub is here: https://github.com/rachank/bouquet_
 
  - Thank you to my mentor Brian Mancharia for code review, tips, help and feedback. All so very much appreciated! 
  - Code Institute for the deployment terminal for Heroku.
+ - This project was very much insired by the Love Sandwiches project and contains some similarities in the code. 
  - [w3schools:](https://www.w3schools.com/python/default.asp) was used for various references.
  - [geeksforgeeks.org](https://www.geeksforgeeks.org/python-programming-language-tutorial/?ref=shm) was used for various references and review.
  - [YouTube - Programming with Mosh:](https://www.youtube.com/@programmingwithmosh/playlists) was used to review topics and have another visual perspective and understanding of what Python can do.
   - [YouTube - Indently:](https://www.youtube.com/@Indently) was used to review topics and have another visual perspective and understanding of what Python can do.
  - [Emoji Unicode Tables:](https://apps.timwhitlock.info/emoji/tables/unicode) was used to add the flower emoji unicodes.
- - This project was very much insired by the Love Sandwiches project and contains some similarities in the code. 
+ 
