@@ -140,6 +140,11 @@ def main():
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
 
+    main()
+
     print("\U0001F33C Welcome to the Bouquet Binge Flower Shop Inventory Information \U0001F33C")
+    
     inventory_need_next_week = obtain_inventory_info(inventory_info)
     print(inventory_need_next_week)
+
+    
