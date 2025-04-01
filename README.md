@@ -5,17 +5,17 @@ This is a project which was very much inspired by the Love Sandwiches project. I
 This program utilizes google sheets to store the inventory, sales and excess data information for the Bouquet Binge Flower Shop.
 
 
-[View the live project here.] (ADD URL)
+[View the live project here.](https://bouquet-binge-2-7f60670f0309.herokuapp.com/)
 
 ## Features
 
 -   Once the program is run the user is prompted to input 7 numbers representing sales values for the 7 different types of bouquets that are sold: Roses, Orchids, Lilies, Carnations, Hydrangeas, Mums, and Seasonal.
 
-![IMAGE DESCRIPTION](RELATIVE PATH)
+![start of program](images/start_of_program.png)
 
 - The program then checks the user input for any invalid inputs, such as non integer inputs or missing numbers and will give error messages to the user and request the user to input the 7 numbers again.
 
-![IMAGE DESCRIPTION](RELATIVE PATH)
+![error messages displayed](images/error_messages_display.png)
 
 
 - This program uses the gspread API to interact with Google Sheets where the data is stored in all of the respective worksheets “inventory”, “excess” and “sales” for the data given, calculated and updated for all of the different types of flower bouquets sold.
