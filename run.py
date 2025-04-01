@@ -101,7 +101,7 @@ def get_latest_sales_info():
     """
     sales_sheet = SHEET.worksheet("sales")
     last_5_entries = []
-    for col_index in range(1,8): 
+    for col_index in range(1, 8):
         column_info = sales_sheet.col_values(col_index)
         last_5 = column_info[2:]
         last_5_entries.append(last_5)
@@ -150,6 +150,7 @@ def main():
     inventory_info = calc_inventory_info(latest_sales_info)
     inventory_need_next_week = obtain_inventory_info(inventory_info)
     print(inventory_need_next_week)
+
 
 main()
 
