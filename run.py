@@ -43,7 +43,7 @@ def obtain_sales_info():
                 Please re-enter valid numbers.")
         sales_info = [int(value) for value in sales_info]
         print("Sales data:", sales_info)
-        return sales_info        
+        return sales_info
 
 
 def update_sales_worksheet(info):
@@ -59,7 +59,7 @@ def update_sales_worksheet(info):
 
 def update_excess_worksheet(info):
     """
-    Update excess worksheet by adding new row according to the list 
+    Update excess worksheet by adding new row according to the list
     information given.
     """
     print("Updating Excess Worksheet...\n")
@@ -84,8 +84,8 @@ def calc_excess_info(sales_row):
     inventory_row = inventory[-1]
     excess_info = []
     for i in range(len(inventory_row)):
-    # Note: try/except is not necessary because inventory is already a validated 
-    # integer from above.
+        # Note: try/except is not necessary because inventory
+        # is already a validated integer from above.
         inventory_value = int(inventory_row[i])
         sales_value = sales_row[i]
         excess = inventory_value - sales_value
@@ -101,7 +101,7 @@ def get_latest_sales_info():
     """
     sales_sheet = SHEET.worksheet("sales")
     last_5_entries = []
-    for col_index in range(1,8):
+    for col_index in range(1,8): 
         column_info = sales_sheet.col_values(col_index)
         last_5 = column_info[2:]
         last_5_entries.append(last_5)
@@ -110,7 +110,7 @@ def get_latest_sales_info():
 
 def calc_inventory_info(info):
     """
-    This calculates the average inventory for each item type, 
+    This calculates the average inventory for each item type,
     adding 15% for additional available inventory.
     """
     print("calculating Inventory Information...\n")
@@ -130,7 +130,7 @@ def obtain_inventory_info(info):
     inventory number for the corresponding bouquet.
     """
     bouquet_options = SHEET.worksheet("inventory").get_all_values()[0]
-    print("\U0001F33C Please prepare the following number of flower
+    print("\U0001F33C Please prepare the following number of flower\
     bouquets for next week's inventory:\n")
     inventory_options = {}
     for bouquet_option, inventory in zip(bouquet_options, info):
@@ -152,6 +152,7 @@ def main():
     print(inventory_need_next_week)
 
 main()
+
 
 print("\U0001F33C Welcome to the Bouquet Binge Flower Shop\
 Inventory Information. \U0001F33C")
